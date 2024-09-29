@@ -9,7 +9,7 @@ export class User {
   displayName?: string;
 
   @Prop({ required: false })
-  avatar?: string;
+  avatarUrl?: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User)
