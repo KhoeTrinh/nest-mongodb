@@ -9,6 +9,7 @@ import { User, UserSchema } from 'src/schemas/user.schema';
 import { UserService } from './user.service';
 import { UserController } from './user.controller';
 import { UserMiddleware1 } from './user.middleware';
+import { UserSettings, UserSettingsSchema } from 'src/schemas/userSettings.schema';
 
 @Module({
   imports: [
@@ -17,7 +18,11 @@ import { UserMiddleware1 } from './user.middleware';
         name: User.name,
         schema: UserSchema,
       },
-    ]),
+      {
+        name: UserSettings.name,
+        schema: UserSettingsSchema,
+      },
+    ]),    
   ],
   providers: [UserService],
   controllers: [UserController],
